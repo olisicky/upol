@@ -1,10 +1,60 @@
+
 body {
     font-family: 'Roboto';
     font-size: 1em;
     margin: 0%;
     width: 100%;
-    height: 100%
+    height: 100%;
   }
+
+.separator{
+    background-color: #f7f7ff;
+}
+
+.side_margins {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding-top: 2vw
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
+
+}
+h2 {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h4 {
+    margin-left: 1.5vw;
+}
+
+h3 {
+    margin-top: 0%;
+    font-weight: 900;
+    position: relative;
+    z-index: 2;
+}
+
+h3::first-letter {
+    position: relative; /* Ensures the first letter is not affected by z-index */
+  }
+
+h3::before {
+    content: '';
+    position: absolute;
+    width: 1.5em; /* Adjust circle size as needed */
+    height: 1.5em; /* Adjust circle size as needed */
+    background-color: orange;
+    border-radius: 50%; /* Make it a circle */
+    top: 50%; /* Position it vertically in the middle */
+    left: -0.3em; /* Adjust position as needed */
+    transform: translateY(-50%); /* Center it vertically */
+    z-index: -1; /* Place it behind the text */
+}
 
 .text{
     color: #555555;
@@ -19,17 +69,6 @@ body {
     line-height: 1.5;
 }
 
-.name-circle {
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    background: #ff9301;
-    text-align: left;
-
-  }
-
-
-
 /*---HEADER---*/
 .initial {
     width: 100%;
@@ -39,12 +78,62 @@ body {
     overflow: hidden;
     grid-template-columns: 50% 50%;
     position: relative;
-    margin-bottom: 0%;
-    padding-bottom: 0%; 
+
 }
-.header{
-    margin-left: 4vw;
-    margin-top: 4vw;
+
+
+
+.initial_test {
+    display: flex;
+    flex-wrap: wrap;
+  }
+.text_test {
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;
+}
+.circle_test {
+    flex: 1;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: auto;
+    /* top: 70%; */
+    right: 0;
+    /* transform: translateY(-70%); */
+    top: 0;
+    width: 50%;
+    height: 50em;
+    border-radius: 40% 0 0 60%; /* Adjust the radius to get half circle */
+    background-color: orange;
+    z-index: -1;
+  }
+
+
+
+  
+
+.circle_test img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transform: translateY(65%) translateX(60%);
+}
+
+.neco_img {
+    position: relative;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translateX(40%)
+}
+
+
+
+
+
+
+
+header{
     width: 100%;
     height: 100%;
     display:inline-block;
@@ -64,25 +153,6 @@ body {
     font-size: 6em;
     margin: 0%;
 }
-h1{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-weight: 900;
-
-}
-h2 {
-    font-size: 2em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-h4 {
-    margin-left: 1.5vw;
-}
-h3 {
-    margin-top: 0%;
-    padding-top: 3%;
-    font-weight: 900;
-}
 .image-container-avatar {
     width: 50%;
     height: auto;
@@ -97,9 +167,11 @@ h3 {
     width: 50em;
     height: 50em;
     background-color: #ff9301;
-    border-radius: 50%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 80%;
     position: absolute;
-    transform: translate(5%, -20%);
+    transform: translate(90%, -70%);
+
 }
 .circle-wrapper {
     width: 100%;
@@ -107,8 +179,6 @@ h3 {
 }
 
 .text-block{
-    margin-left: 4vw;
-    margin-right: 4vw;
     padding-top: 10;
 }
 
@@ -123,22 +193,24 @@ menu {
 
 /*---BIBLIOGRAPHY---*/
 .bibliography {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
     overflow: hidden;
-    grid-template-columns: 30% 70%;
-    padding-top: 5%;
+    /* grid-template-columns: 30% 70%; */
 }
 .bib-avatar{
-    height: 100%;
+    height: 80%;
     width: auto;
     position: relative;
     border-radius: 50%;
     margin: auto
 }
 .bib-text{
+
     margin-left: 4vw;
+    flex: 1 2;
     width: 100%;
-    display:inline-block;
     max-width: 100%;
     max-height: 100%;
 }
@@ -164,7 +236,7 @@ img.bib-img{
 .avatar-row-bib {
     display: grid;
     overflow: hidden;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 80% 20%;
 }
 
 .circle-wrapper-bib {
@@ -192,6 +264,7 @@ img.bib-img{
     font-weight: 900;
     font-size: 1.5em;
     color: black;
+    margin-top: 0;
     margin-bottom: 0.5em;
 }
 .bib-role-role {
@@ -275,7 +348,6 @@ img.bib-img{
     width: 100%;
     min-height: 12em;
     border-radius: 10px;
-    margin: 1%;
     background-color: #f7f7ff;
     position: relative;
     margin-bottom: 2%;
@@ -514,10 +586,6 @@ button {
     color: #bbbbbb;
 }
 
-.separator{
-    background-color: #f7f7ff;
-}
-
 .backgroud{
     color: #f7f7ff;
 }
@@ -527,5 +595,4 @@ button {
     left: 50%;
     /* bring your own prefixes */
     transform: translate(-50%, 90%);
-  }
-
+}
