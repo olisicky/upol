@@ -5,11 +5,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<main>
-    <section class="initial_test side_margins">
-        <!-- <div class="side_margins"> -->
+<main class="container">
+    <header class="initial_test">
         <div class="text_test">
 
             <p class="text-header"> Hello, my name is</p>
@@ -21,35 +21,35 @@
                 modern websites, web services and online stores.
             </p>
 
-            <menu>
-                <li>
+            <nav class="nav_container">
+                <li class="link_container">
                     <a href="#bibliography" class="text link"> Bibliography</a>
                 </li>
-                <li>
+                <li class="link_container">
                     <a href="#whatIdo" class="text link"> What I do</a>
                 </li>
-                <li>
+                <li class="link_container">
                     <a href="#awards" class="text link"> Awards</a>
                 </li>
-                <li>
+                <li class="link_container">
                     <a href="#experience" class="text link"> Experience</a>
                 </li>
-                <li>
+                <li class="link_container">
                     <a href="#portfolio" class="text link"> Portfolio</a>
                 </li>
-                <li>
+                <li class="link_container">
                     <a href="#contact" class="text link"> Contact</a>
                 </li>   
-            </menu>
+            </nav>
 
         </div>
-        <div class="circle_test"></div>
-        <img class="neco_img" src="images/avatar.svg" alt="avatar">
+        <div class="circle_test">
+            <img class="neco_img" src="images/avatar.svg" alt="avatar">
+        </div>
 
+    </header>
 
-    </section>
-
-    <section class="text-block separator">
+    <section class="text-block separator" id="bibliography">
         <div class="side_margins bibliography">
             <div class="avatar-row-bib">
                 <div class="bib-avatar">
@@ -64,7 +64,7 @@
             <div class="bib-text">
                 <h3> Bibliography</h3>
 
-                <p class="text text-width">
+                <p class="text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
                     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
@@ -77,27 +77,29 @@
 
     <div class="horizontal-line separator"></div>
         
-    <section class="text-block separator">
+    <section class="separator" id="whatIdo">
+        
+        
         <div class="side_margins">
             <h3> What I do?</h3>
-            
-            <div class="whatido_box">
-                <div class="circle-wrapper">
+            <div class="whatIDo-container">
+
+
+                <div class="whatido_box">
                     <div class="whatido-circle">
                         <div class="image-container">
                             <img src="images/pencil-alt-solid.svg">
                         </div>
                     </div>
+                    <h4>Web design</h4>
+                    <p class="whatido_text text text-width">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    </p>
                 </div>
-                <h4>Web design</h4>
-                <p class="whatido_text text text-width">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                </p>
-            </div>
 
-            <div class="whatido_box">
-                <div class="circle-wrapper">
+                <div class="whatido_box">
+
                     <div class="whatido-circle">
                         <div class="image-container">
                             <img src="images/desktop-solid.svg">
@@ -108,10 +110,10 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                     </p>
+
                 </div>
-            </div>
-            <div class="whatido_box">
-                <div class="circle-wrapper">
+                <div class="whatido_box">
+
                     <div class="whatido-circle">
                         <div class="image-container">
                             <img src="images/bullseye-solid.svg">
@@ -122,35 +124,32 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                     </p>
+
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="text-block separator">
+    <section class="text-block separator" id="awards">
         <div class="side_margins">
             <h3 class="sub-section"> Awards</h3>
-            <div class="award_box">
-                <div class="award-wrapper">
-                    <img src="images/trophy-solid.svg" class="award-image">
-                    <div>
+            <div class="award_container">
+                <div class="award_box">
+                    <div class="award-wrapper">
+                        <img src="images/trophy-solid.svg" class="award-image">
                         <p class="text award-text-center">Creative design</p>
                     </div>
                 </div>
-            </div>
-            <div class="award_box">
-                <div class="award-wrapper">
-                    <img src="images/trophy-solid.svg" class="award-image">
-                    <div>
+                <div class="award_box">
+                    <div class="award-wrapper">
+                        <img src="images/trophy-solid.svg" class="award-image">
                         <p class="text award-text-center">Yearly best performer</p>
                     </div>
                 </div>
-            </div>
-            <div class="award_box">
-                <div class="award-wrapper">
-                    <img src="images/trophy-solid.svg" class="award-image">
-                    <div>
+                <div class="award_box">
+                    <div class="award-wrapper">
+                        <img src="images/trophy-solid.svg" class="award-image">
                         <p class="text award-text-center">Best Learner Award</p>
                     </div>
                 </div>
@@ -162,67 +161,67 @@
     <section class="section text-block" id="experience">
         <div class="side_margins">
             <h3> Experience</h3>
-            <div class="experience-box">
-                <div class="experience-date">
-                    <p class="text experience-text-center">Feb 2021 - Present</p>
-                    <label class="label-center label ft">Full Time</label>
-                </div>
-                <div class="vert-line"></div>
-                <div class="experience-desc">
-                    <h3>Google LLC - Sr. Front-end Engineer</h3>
-                    <p class="text text-width">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    </p>
+            <div class="experience_container">
+                <div class="experience-box">
+                    <div class="experience-date">
+                        <p class="text experience-text-center">Feb 2021 - Present</p>
+                        <label class="ft">Full Time</label>
+                    </div>
+                    <div class="vert-line"></div>
+                    <div class="experience-desc">
+                        <h3>Google LLC - Sr. Front-end Engineer</h3>
+                        <p class="text text-width">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        </p>
 
+                    </div>
                 </div>
-            </div>
-            <div class="experience-box">
-                <div class="experience-date">
-                    <p class="text experience-text-center">Mar 2020 - Present</p>
-                    <label class="label-center label pt">Part Time</label>
-                </div>
-                <div class="vert-line"></div>
-                <div class="experience-desc">
-                    <h3>Radian IT - Visual Designer</h3>
-                    <p class="text text-width">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    </p>
+                <div class="experience-box">
+                    <div class="experience-date">
+                        <p class="text experience-text-center">Mar 2020 - Present</p>
+                        <label class="pt">Part Time</label>
+                    </div>
+                    <div class="vert-line"></div>
+                    <div class="experience-desc">
+                        <h3>Radian IT - Visual Designer</h3>
+                        <p class="text text-width">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        </p>
 
+                    </div>
                 </div>
-            </div>
-            <div class="experience-box">
-                <div class="experience-date">
-                    <p class="text experience-text-center">Jan 2019 - Present</p>
-                    <label class="label-center label ft">Full Time</label>
-                </div>
-                <div class="vert-line"></div>
-                <div class="experience-desc">
-                    <h3>IB Themes - Animation Artist</h3>
-                    <p class="text text-width">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    </p>
+                <div class="experience-box">
+                    <div class="experience-date">
+                        <p class="text experience-text-center">Jan 2019 - Present</p>
+                        <label class="ft">Full Time</label>
+                    </div>
+                    <div class="vert-line"></div>
+                    <div class="experience-desc">
+                        <h3>IB Themes - Animation Artist</h3>
+                        <p class="text text-width">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        </p>
 
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="text-block">
+    <section class="text-block" id="portfolio">
         <div class="side_margins">
             <h3> My portfolio</h3>
-            <div class="port-col-1">
+            <div class="port_container">
 
-                <div class="port-row">
-                    <div class="port-img-container">
-                        <img src="images/555.png" class="port-image">
-                    </div>
+                <div class="port-item">
+                    <img src="images/555.png" class="port-image">
                     <div class="port-desc">
                         <p class="port-desc-title">Nečum 2</p>
                         <p class="text port-desc-date">07/13/2305</p>
@@ -232,10 +231,8 @@
                     </div>
                 </div>
 
-                <div class="port-row">
-                    <div class="port-img-container">
-                        <img src="images/555.png" class="port-image">
-                    </div>
+                <div class="port-item">
+                    <img src="images/555.png" class="port-image">
                     <div class="port-desc">
                         <p class="port-desc-title">Nečum 2</p>
                         <p class="text port-desc-date">07/13/2305</p>
@@ -246,10 +243,8 @@
                 </div>
 
 
-                <div class="port-row">
-                    <div class="port-img-container">
-                        <img src="images/555.png" class="port-image">
-                    </div>
+                <div class="port-item">
+                    <img src="images/555.png" class="port-image">
                     <div class="port-desc">
                         <p class="port-desc-title">Nečum 2</p>
                         <p class="text port-desc-date">07/13/2305</p>
@@ -258,12 +253,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="port-col-2">
-                <div class="port-row">
-                    <div class="port-img-container">
-                        <img src="images/555.png" class="port-image">
-                    </div>
+
+                <div class="port-item">
+                    <img src="images/555.png" class="port-image">
                     <div class="port-desc">
                         <p class="port-desc-title">Nečum 2</p>
                         <p class="text port-desc-date">07/13/2305</p>
@@ -272,10 +264,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="port-row">
-                    <div class="port-img-container">
-                        <img src="images/555.png" class="port-image">
-                    </div>
+                <div class="port-item">
+                    <img src="images/555.png" class="port-image">
                     <div class="port-desc">
                         <p class="port-desc-title">Nečum 2</p>
                         <p class="text port-desc-date">07/13/2305</p>
@@ -284,10 +274,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="port-row">
-                    <div class="port-img-container">
-                        <img src="images/555.png" class="port-image">
-                    </div>
+                <div class="port-item">
+                    <img src="images/555.png" class="port-image">
                     <div class="port-desc">
                         <p class="port-desc-title">Nečum 2</p>
                         <p class="text port-desc-date">07/13/2305</p>
@@ -305,15 +293,11 @@
         <div class="side_margins">
             <h3> Contact</h3>
             
-            <div class="contact-row">
-                <div class="contact-col">
+            <div class="contact_container"> 
+                <div class="contact_info_container">
                     <div class="contact-info">
-                        <div>
-                            <p class="port-desc-title">What's your story? Get in touch</p>
-                        </div>
-                        <div class="text">
-                            <p>Always available for freelancing if the right project comes along. Feel free to contact me.</p>
-                        </div>
+                        <p class="contact_text">What's your story? Get in touch</p>
+                        <p>Always available for freelancing if the right project comes along. Feel free to contact me.</p>
                         <div class="contact-add-split">
                             <div class="contact-img-container">
                                 <img src="images/map-marker-alt-solid.svg" class="contact-image">
@@ -335,28 +319,30 @@
                         </div>
                     </div>
 
-
-    <!-- Přidání mailing section : zatím bez funkcionality! -->
-                    <div class="contact-comment">
+                    <div class="contact_comment_container">
                     
                         <h3>Say something</h3>
-                        <div class="contact-mess-split">
-                            <div class="contact-box-name">
+                        <form class="contact_form_container">
+                            <div class="contact_name_mail">
                                 <input type="text" placeholder="Full Name" name="name" id="name">
-                            </div>
-                            <div class="contact-box-email">
                                 <input type="email" placeholder="Email address" name="email" id="email">
                             </div>
-                        </div>
-                        
-                        <div class="contact-box-subject">
+                            
                             <input type="subject" placeholder="Subject" name="subject" id="subject">
-                        </div>
 
-                        <div class="contact-box-comment">
                             <input type="comment" placeholder="Type comment" name="comment" id="comment">
-                        </div>
-                        <button type="submit">Send message</button>
+                        
+                            <button type="button" onclick="openPopup()">Send message</button>
+                            <!-- Add JS functionality -->
+                            <div id="submit" class="modal">
+                                <div class="modal-content">
+                                    <div id="output"></div>
+                                    <button type="submit" onclick="closePopup()">Close</button>
+                                </div>
+                            </div>
+                            <script src="/scripts/popup.js"></script>
+                        </form>
+                        
                     </div>
 
                 </div>
@@ -369,9 +355,9 @@
     </section>
 
 
-    <section class="socky-block side_margins">
+    <footer class="socky_container side_margins" id="contact">
 
-        <div>
+        <div class="socky_icons">
             <a href="https://twitter.com/home">
                 <img src="images/twitter-square-brands.svg" alt="Black Icon" class="socky-img">
             </a>
@@ -379,10 +365,9 @@
                 <img src="images/facebook-square-brands.svg" alt="Black Icon" class="socky-img">
             </a>
         </div>
-        <p></p>
         <p class="socky-copyright text">&#169; Lorem ipsum dolor sit amet 2022</p>
 
-    </section>
+    </footer>
 </main>
 
 
