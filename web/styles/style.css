@@ -22,6 +22,16 @@ body {
     padding-top: 2vw
 }
 
+hr {
+    border: 0;
+    margin-top: 2vw;
+    margin-bottom: 2vw; 
+    margin-left: 4vw; 
+    margin-right: 4vw;
+    background:url("/images/border-dark.png") 0 0; 
+    background-size: 30%;
+}
+
 h1{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -46,7 +56,7 @@ h3 {
 
 h3::first-letter {
     position: relative; /* Ensures the first letter is not affected by z-index */
-  }
+}
 
 h3::before {
     content: '';
@@ -59,6 +69,11 @@ h3::before {
     left: -0.3em; /* Adjust position as needed */
     transform: translateY(-50%); /* Center it vertically */
     z-index: -1; /* Place it behind the text */
+}
+.h3-box {
+    margin-top: 0%;
+    font-weight: 900;
+    position: relative;
 }
 
 .text{
@@ -75,16 +90,6 @@ h3::before {
 }
 
 /*---HEADER---*/
-.initial {
-    width: 100%;
-    display: grid;
-    min-height: 25em;
-    height: fit-content;
-    overflow: hidden;
-    grid-template-columns: 50% 50%;
-    position: relative;
-
-}
 
 .nav_container{
     display: flex;
@@ -95,18 +100,18 @@ h3::before {
 }
 
 
-.initial_test {
+.initial {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
   }
-.text_test {
+.init-text {
     margin-left: 2vw;
     width: 50%;
 }
 
-.circle_test {
+.init-circle {
     flex: 1;
     overflow: auto;
     right: 0;
@@ -119,35 +124,22 @@ h3::before {
     padding-right: 2vw;
   }
 
-.circle_test img {
+.init-circle img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
 }
 
-.neco_img {
+.init-img {
     position: relative;
     left: 0;
-    max-width: 100%;
-    max-height: 100%;
-    transform: translateX(10%);
+    padding-left: 4vw;
     vertical-align: bottom
 }
-
-
-
-
-
-
-
 header{
     height: 100%;
 }
-.header2{
-    width: 50%;
-    margin-left: 50%;
-    display:inline-block;
-}
+
 .backhead{
     color:  #ff9301;
     opacity: 0.5;
@@ -160,42 +152,10 @@ header{
     overflow: hidden;
     white-space: nowrap;
 }
-.image-container-avatar {
-    width: 50%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    bottom: -1%;
-    right: -10%;
-
-  }
-.circle-avatar {
-    width: 50em;
-    height: 50em;
-    background-color: #ff9301;
-    border-top-left-radius: 100%;
-    border-bottom-left-radius: 80%;
-    position: absolute;
-    transform: translate(90%, -70%);
-
-}
-.circle-wrapper {
-    width: 100%;
-    overflow: hidden;
-}
-
-.text-block{
-    padding-top: 10;
-}
 
 li {
     display: inline-block;
-    padding-right: 2%;
-}
-menu {
-    padding-left: 0;
-    padding-bottom: 4vw;
+
 }
 
 /*---BIBLIOGRAPHY---*/
@@ -249,18 +209,6 @@ img.bib-img{
     border-radius: 50%;
     position: relative;
 }
-
-
-.horizontal-line {
-    width: 90%;
-    height: 1px;
-    background: #eeeeee;
-    top: 0;
-    margin-left: 5%;
-    bottom: 0;
-    position: relative;
-    text-decoration-style: wavy;
-  }
 
 .circle-wrapper-bib {
     width: 100%;
@@ -373,6 +321,7 @@ img.bib-img{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 2vw
 }
 
 .experience-text-center {
@@ -385,13 +334,6 @@ label {
     border-radius: 5px;
     width: 50%
   }
-
-.label-center {
-    position: relative;
-    margin-left: 25%;
-    margin-top: 25%;
-
-}
 .vert-line {
     height: 80%;
     width: 1px;
@@ -514,6 +456,10 @@ input {
 input::placeholder {
     padding-left: 1em;
 }
+textarea::placeholder {
+    padding-left: 1em;
+    padding-top: 1em;
+}
 
 input:active {
     width: 100%;   
@@ -535,6 +481,7 @@ button {
 }
 .contact-map {
     width: 100%;
+    filter: grayscale(100%);
 }
 .contact-map-iframe {
     padding: 5px;
@@ -591,10 +538,7 @@ button {
     margin-bottom: auto
 }
 
-
-
-
-
+/* REST */
 
 .link {
     text-decoration: none    
@@ -602,16 +546,6 @@ button {
 
 .frame{
     color: #bbbbbb;
-}
-
-.backgroud{
-    color: #f7f7ff;
-}
-.center {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 90%);
 }
 
 
@@ -623,10 +557,16 @@ button {
         margin-left: 8vw;
         margin-right: 8vw;
     }
-    .text_test {
+    .init-circle {
+        clip-path: circle(100% at 95% 50%);
+    }
+    hr {
+        height: 0.8em;
+    }
+    .init-text {
         margin-left: 8vw;
     }
-    .circle_test {
+    .init-circle {
         padding-right: 8vw;
     }
 }
@@ -636,10 +576,13 @@ button {
         margin-left: 4vw;
         margin-right: 4vw;
     }
-    .text_test {
+    hr {
+        height: 0.6em;
+    }
+    .init-text {
         margin-left: 4vw;
     }
-    .circle_test {
+    .init-circle {
         padding-right: 4vw;
     }
 }
@@ -650,13 +593,16 @@ button {
         margin-left: 4vw;
         margin-right: 4vw;
     }
-    .text_test {
+    hr {
+        height: 0.3em;
+    }
+    .init-text {
         margin-left: 4vw;
         margin-right: 4vw;
         flex-basis: 100%;
         padding-bottom: 4vw;
     }
-    .circle_test{
+    .init-circle{
         display: none;
     }
     .bibliography {
@@ -703,13 +649,16 @@ button {
         margin-left: 4vw;
         margin-right: 4vw;
     }
-    .text_test {
+    hr {
+        height: 0.2em;
+    }
+    .init-text {
         margin-left: 4vw;
         margin-right: 4vw;
         flex-basis: 100%;
         padding-bottom: 4vw;
     }
-    .circle_test{
+    .init-circle{
         display: none;
     }
     .title{
@@ -818,10 +767,7 @@ button {
 
 
 
-
-
-
-
+/* Pokus JS */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

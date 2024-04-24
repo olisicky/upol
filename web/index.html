@@ -9,8 +9,8 @@
 </head>
 
 <main class="container">
-    <header class="initial_test">
-        <div class="text_test">
+    <header class="initial">
+        <div class="init-text">
 
             <p class="text-header"> Hello, my name is</p>
             <h1 class="title">Jane Doe</h1>
@@ -43,13 +43,13 @@
             </nav>
 
         </div>
-        <div class="circle_test">
-            <img class="neco_img" src="images/avatar.svg" alt="avatar">
+        <div class="init-circle">
+            <img class="init-img" src="images/avatar.svg" alt="avatar">
         </div>
 
     </header>
 
-    <section class="text-block separator" id="bibliography">
+    <section class="separator" id="bibliography">
         <div class="side_margins bibliography">
             <div class="avatar-row-bib">
                 <div class="bib-avatar">
@@ -73,9 +73,8 @@
                 </p>
             </div>
         </div>
+        <hr>
     </section>
-
-    <div class="horizontal-line separator"></div>
         
     <section class="separator" id="whatIdo">
         
@@ -131,7 +130,7 @@
     </section>
 
 
-    <section class="text-block separator" id="awards">
+    <section class="separator" id="awards">
         <div class="side_margins">
             <h3 class="sub-section"> Awards</h3>
             <div class="award_container">
@@ -158,7 +157,7 @@
     </section>
 
 
-    <section class="section text-block" id="experience">
+    <section class="section" id="experience">
         <div class="side_margins">
             <h3> Experience</h3>
             <div class="experience_container">
@@ -169,7 +168,8 @@
                     </div>
                     <div class="vert-line"></div>
                     <div class="experience-desc">
-                        <h3>Google LLC - Sr. Front-end Engineer</h3>
+                        <p class="h3-box">Google LLC - Sr. Front-end Engineer</p>
+                        <!-- <h3>Google LLC - Sr. Front-end Engineer</h3> -->
                         <p class="text text-width">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -185,7 +185,8 @@
                     </div>
                     <div class="vert-line"></div>
                     <div class="experience-desc">
-                        <h3>Radian IT - Visual Designer</h3>
+                        <!-- <h3>Radian IT - Visual Designer</h3> -->
+                        <p class="h3-box">Radian IT - Visual Designer</p>
                         <p class="text text-width">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -201,7 +202,9 @@
                     </div>
                     <div class="vert-line"></div>
                     <div class="experience-desc">
-                        <h3>IB Themes - Animation Artist</h3>
+                        <!-- <h3>IB Themes - Animation Artist</h3> -->
+                        <p class="h3-box">IB Themes - Animation Artist</p>
+
                         <p class="text text-width">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -215,7 +218,7 @@
     </section>
 
 
-    <section class="text-block" id="portfolio">
+    <section id="portfolio">
         <div class="side_margins">
             <h3> My portfolio</h3>
             <div class="port_container">
@@ -289,7 +292,7 @@
     </section>
 
 
-    <section class="separator text-block">
+    <section class="separator">
         <div class="side_margins">
             <h3> Contact</h3>
             
@@ -321,17 +324,19 @@
 
                     <div class="contact_comment_container">
                     
-                        <h3>Say something</h3>
+                        <!-- <h3>Say something</h3> -->
+                        <p class="h3-box">Say something</p>
+
                         <form class="contact_form_container">
                             <div class="contact_name_mail">
                                 <input type="text" placeholder="Full Name" name="name" id="name">
                                 <input type="email" placeholder="Email address" name="email" id="email">
                             </div>
                             
-                            <input type="subject" placeholder="Subject" name="subject" id="subject">
+                            <input type="text" placeholder="Subject" name="subject" id="subject">
 
-                            <input type="comment" placeholder="Type comment" name="comment" id="comment">
-                        
+                            <!-- <input type="text" placeholder="Type comment" name="comment" id="comment"> -->
+                            <textarea type="text" id="comment" placeholder="Type comment" name="comment" rows="4" cols="50"></textarea>
                             <button type="button" onclick="openPopup()">Send message</button>
                             <!-- Add JS functionality -->
                             <div id="submit" class="modal">
