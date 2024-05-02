@@ -40,7 +40,8 @@ hr {
 textarea  
 {  
     font-family: 'Roboto';
-    font-size: 1em;   
+    font-size: 1em;  
+    border-color: #bbbbbb;
 }
 
 h1{
