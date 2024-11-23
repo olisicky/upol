@@ -16,3 +16,15 @@ Volání:
 ./pr_1.sh -a    # vypíše z aktuální složky se skrytými soubory/složkami
 ./pr_1.sh -a ~    # vypíše z domovské cesty i se skrytými soubory/složkami
 ```
+
+
+## Příklad 2
+Skript vytvoří soubory, do kterých jsou náhodně zapsány DD/MM/YYYY. Je řízen přes dva přepínaše `-a`, který vygeneruje soubory a `-b`, který přímá argument cesty k souborům, který poukládá soubory do podadresářů podle roku, měsíce a dne.
+
+Příklad:
+
+```bash
+./pr_2.sh -a    # vygeneruj soubory do aktuálního adresáře
+./pr_2.sh -b files    # poukládá soubory ze složky files (zde byly soubory nakopírovány ručně pro test) postupně do podakresářů
+
+```
