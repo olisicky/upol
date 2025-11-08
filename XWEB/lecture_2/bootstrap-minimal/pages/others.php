@@ -42,7 +42,9 @@
     </div>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#">logout</a>
+        <form method="POST">
+          <button class="btn btn-link" type="submit" name="logout">logout</button>
+        </form>
       </div>
     </div>
   </header>

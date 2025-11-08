@@ -28,8 +28,6 @@
 
 </style>
 <body>
-
-
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <button class="navbar-toggler d-md-none collapsed m-2 b-0" type="button" data-bs-toggle="collapse"
       data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,12 +35,11 @@
     </button>
 
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">simple administration</a>
-    <div>
-      <?php echo "Hello world"; ?>
-    </div>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#">logout</a>
+        <form method="POST">
+          <button class="btn btn-link" type="submit" name="logout">logout</button>
+        </form>
       </div>
     </div>
   </header>
@@ -90,7 +87,7 @@
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-3 pb-3">
         <h2>Users page</h2>
-        <p>This is the users page.</p>
+        <p>Přihlášeným uživatelem je <?php echo $_SESSION["user"]; ?></p>
       </main>
     </div>
   </div>

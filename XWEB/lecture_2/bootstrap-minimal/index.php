@@ -10,21 +10,28 @@ $request_uri = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
 $page = $request_uri[0] ?: 'login';    # pokud prázdné, tak login
 $path = "pages/" . $page . ".php";
 
-if ($_POST) {
-  if (array_key_exists('user', $_POST)) {
-    $user = isset($_POST['user']) ? $_POST['user'] : '';
-    $password = isset($_POST['psw']) ? $_POST['psw'] : '';
-    $_SESSION["user"]=$user;
-    $_SESSION["password"]=$password;
-  }
+if ($_POST && array_key_exists('logout', $_POST)) {
+    session_unset();
+    session_destroy();
+    header("Location: /login");
+    exit();
+}
+
+
+if ($_POST && array_key_exists('user', $_POST)) {
+  $user = isset($_POST['user']) ? $_POST['user'] : '';
+  $password = isset($_POST['psw']) ? $_POST['psw'] : '';
+  $_SESSION["user"]=$user;
+  $_SESSION["password"]=$password;
   header("Location: /dashboard");
   exit();
 }
 
-if ($page != 'login' && !isset($_SESSION["user"]) || !isset($_SESSION["password"])){
+
+if ($page != 'login' && (!isset($_SESSION["user"]) || !isset($_SESSION["password"]))){
     header("Location: /login");
     exit();
-} 
+}
 ?>
 
 <!DOCTYPE html>
