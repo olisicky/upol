@@ -1,0 +1,71 @@
+name: appache-php-mysql
+version: '0.1'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - type: bind
+        source: ./bootstrap-minimal
+        target: /var/www/html/
+      - type: bind
+        source: ./config/apache2.conf
+        target: /etc/apache2/apache2.conf
+    command: bash -c "a2enmod rewrite && apache2-foreground"    # povolím mod_rewrite pro hezčí URL (jinak než u Apache defaukt image)
+    networks:
+      my-network:
+        ipv4_address: 192.168.1.4
+# init.sql si vytvořím pro nastavení databáze a data by měla být vždy kopírována v tom mapovaném volume
+  database:
+    image: mysql:latest
+    container_name: my-sql-container
+    # command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: heslo
+      MYSQL_USER: test
+      MYSQL_PASSWORD: heslo
+      MYSQL_DATABASE: moje_db
+    volumes:
+      - ./config/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data:/var/lib/mysql
+    networks:
+      my-network:
+        ipv4_address: 192.168.1.2
+  
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - database:db
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      my-network:
+        ipv4_address: 192.168.1.3
+
+  api:
+    image: node:latest
+    container_name: node-api
+    working_dir: /usr/src/app
+    volumes:
+      - ./api:/usr/src/app
+    command: bash -c "npm install && node index.js"    # nainstaluji závislosti z package.json a spustím index.js
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    networks:
+      my-network:
+        ipv4_address: 192.168.1.5
+
+
+# definuji rozsah sítě, kterou budu používat. Vytvoří si vlastní podsíť
+# neřeší zabezpečení. Když exposnu port, tak je dostupný z venčí! 
+networks:
+  my-network:
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24
