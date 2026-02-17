@@ -55,6 +55,7 @@ function confirm_edit(confirmButtonId, formId, dialogId) {
         })
         .then(response => {
             if (response.ok) {
+                form.style.display = 'none';
                 // zobrazení notifikace p nějakou dobu, pak reload, abych byl zas na /users
                 showNotification('Uživatel byl úspěšně upraven.');
                 setTimeout(() => {

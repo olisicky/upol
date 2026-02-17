@@ -203,3 +203,4 @@
 </div>
 
 <script src="./bootstrap.js"></script>
+<script src="./js/edit.js"></script>

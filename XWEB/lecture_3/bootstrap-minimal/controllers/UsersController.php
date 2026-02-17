@@ -77,7 +77,6 @@ class UsersController extends BaseController {
 
         }
         elseif (isset($_SESSION['add_user'])) {
-            echo "ano";
             $edit = $_SESSION['add_user'];
             $userToEdit = [
                 'name' => '',
@@ -109,6 +108,7 @@ class UsersController extends BaseController {
             $this->usersModel->update($_POST);
             unset($_SESSION['edit_mode']);
             unset($_SESSION['user_to_edit']);
+            reload();
         }
 
         elseif (isset($_POST['save_update']) && isset($_SESSION['add_user'])) {
